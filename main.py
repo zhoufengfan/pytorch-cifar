@@ -12,6 +12,7 @@ import os
 import argparse
 
 from models import *
+from models.backbone import Network2
 from utils import progress_bar
 
 
@@ -68,7 +69,7 @@ print('==> Building model..')
 # net = ShuffleNetV2(1)
 # net = EfficientNetB0()
 # net = RegNetX_200MF()
-net = SimpleDLA()
+net = Network2()
 net = net.to(device)
 if device == 'cuda':
     net = torch.nn.DataParallel(net)
