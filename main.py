@@ -27,6 +27,7 @@ best_acc = 0  # best test accuracy
 start_epoch = 0  # start from epoch 0 or last checkpoint epoch
 
 # Data
+#
 print('==> Preparing data..')
 transform_train = transforms.Compose([
     transforms.ToPILImage(),
