@@ -1,4 +1,6 @@
 '''Train CIFAR10 with PyTorch.'''
+from multiprocessing.dummy import freeze_support
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -16,6 +18,7 @@ from models import *
 from models.backbone import Network2
 from utils import progress_bar
 
+freeze_support()
 parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Training')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
 parser.add_argument('--resume', '-r', action='store_true',
